@@ -29,53 +29,36 @@ export default function Form() {
   } = useForm();
 
   const sendEmail = (params) => {
-    const toastId = toast.loading("Sending your message, please wait...");
-
-    toast.info(
-      "Form submissions are demo-only here. Please checkout the final code repo to enable it. If you want to connect you can reach out to me via codebucks27@gmail.com.",
-      {
-        id: toastId,
-      }
-    );
-
-    // comment out the above toast.info and uncomment the below code to enable emailjs
-
-    // emailjs
-    //   .send(
-    //     process.env.NEXT_PUBLIC_SERVICE_ID,
-    //     process.env.NEXT_PUBLIC_TEMPLATE_ID,
-    //     params,
-    //     {
-    //       publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-    //       limitRate: {
-    //         throttle: 5000, // you can not send more then 1 email per 5 seconds
-    //       },
-    //     }
-    //   )
-    //   .then(
-    //     () => {
-    //       toast.success(
-    //         "I have received your message, I will get back to you soon!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     },
-    //     (error) => {
-    //       // console.log("FAILED...", error.text);
-    //       toast.error(
-    //         "There was an error sending your message, please try again later!",
-    //         {
-    //           id: toastId,
-    //         }
-    //       );
-    //     }
-    //   );
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        params,
+        {
+          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
+          limitRate: {
+            throttle: 5000, // you can not send more then 1 email per 5 seconds
+          },
+        }
+      )
+      .then(
+        () => {
+          toast.success(
+            "I have received your message, I will get back to you soon!",
+            {
+              id: toastId,
+            }
+          );
+        },
+        (error) => {
+          console.log("FAILED...", error.text);    
+        }
+      );
   };
 
   const onSubmit = (data) => {
     const templateParams = {
-      to_name: "CodeBucks",
+      to_name: "James Kevin",
       from_name: data.name,
       reply_to: data.email,
       message: data.message,
