@@ -29,10 +29,11 @@ yarn-error.log*
 
 # local env files
 .env*.local
-Readme.md
-# vercel
+.env
+
 .vercel
 
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+README.md
