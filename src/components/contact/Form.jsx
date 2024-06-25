@@ -26,6 +26,7 @@ export default function Form() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const sendEmail = (params) => {
@@ -34,24 +35,16 @@ export default function Form() {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         params,
-        {
-          publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY,
-          limitRate: {
-            throttle: 5000, // you can not send more then 1 email per 5 seconds
-          },
-        }
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         () => {
-          toast.success(
-            "I have received your message, I will get back to you soon!",
-            {
-              id: toastId,
-            }
-          );
+         console.log('SUCCESS');
+         reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);    
+          console.log("FAILED...", error.text);
+          reset();
         }
       );
   };
@@ -85,7 +78,7 @@ export default function Form() {
             required: "This field is required!",
             minLength: {
               value: 3,
-              message: "Name should be atleast 3 characters long.",
+              message: "Name should be at least 3 characters long.",
             },
           })}
           className="w-full p-2 rounded-md shadow-lg text-foreground focus:outline-none focus:ring-2 focus:ring-accent/50 custom-bg"
