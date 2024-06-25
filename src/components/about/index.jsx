@@ -111,6 +111,26 @@ const AboutDetails = () => {
             />
           </Link>
         </ItemLayout>
+        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+            <Link 
+              href="https://www.udemy.com/certificate/UC-56fa87f7-4b6d-4de3-a4a9-a6c52703d091"
+              target="_blank"
+              className="w-full p-6 flex flex-col gap-5"
+            >
+              <h2>Full Stack Web Development - Certification</h2>
+              <p className="text-sm">Udemy</p>
+            </Link> 
+        </ItemLayout>
+        <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
+            <Link 
+              href="https://www.freecodecamp.org/certification/james_007/javascript-algorithms-and-data-structures"
+              target="_blank"
+              className="w-full p-6 flex flex-col gap-5"
+            >
+              <h2>Javascript Algorithm and Data Structure - Certification</h2>
+              <p className="text-sm">Freecodecamp</p>
+            </Link>
+        </ItemLayout>
       </div>
     </section>
   );
