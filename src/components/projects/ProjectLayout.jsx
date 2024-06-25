@@ -21,7 +21,7 @@ const ProjectLayout = ({ name, description, demoLink, sourceCode }) => {
           <p className="w-3/5 text-muted hidden sm:inline-block">{description}</p>
         </div>
         <Link href={sourceCode} target="_blank" passHref>
-          <p className="text-foreground">
+          <p className="text-foreground underline decoration-1 hover:opacity-80 hover:scale-90">
             Source Code
           </p>
         </Link>
