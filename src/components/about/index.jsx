@@ -118,7 +118,13 @@ const AboutDetails = () => {
               className="w-full p-6 flex flex-col gap-5"
             >
               <h2>Full Stack Web Development - Certification</h2>
-              <p className="text-sm">Udemy</p>
+              <p className="text-sm flex items-center">
+                    <img src="./udemy.svg" 
+                    alt="udemy logo"
+                    className="w-6 h-5"
+                    />
+                    Udemy
+              </p>
             </Link> 
         </ItemLayout>
         <ItemLayout className={"col-span-full md:col-span-6 !p-0"}>
@@ -128,7 +134,13 @@ const AboutDetails = () => {
               className="w-full p-6 flex flex-col gap-5"
             >
               <h2>Javascript Algorithm and Data Structure - Certification</h2>
-              <p className="text-sm">Freecodecamp</p>
+                  <p className="text-sm flex items-center gap-2">
+                    <img src="./freecode.svg" 
+                    alt="freecodecamp logo"
+                    className="w-7 h-7"
+                    />
+                    Freecodecamp
+                  </p>
             </Link>
         </ItemLayout>
       </div>
