@@ -149,7 +149,7 @@ export const BtnList = [
   },
   {
     label: "Resume",
-    link: "/james-kevin-garciano.pdf",
+    link: "/james-kevin-garciano-cv.pdf",
     icon: "resume",
     newTab: true,
   },
