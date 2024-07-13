@@ -19,6 +19,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.0",
+    "react-icon-cloud": "^4.1.4",
     "sharp": "^0.33.2",
     "sonner": "^1.4.3",
     "three": "^0.162.0"
