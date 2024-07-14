@@ -42,7 +42,7 @@ export const projectsData = [
     id: 4,
     name: "Simple HTML-CSS-JS Project",
     description:"Welcome to our Simple HTML, CSS, and JavaScript Projects Blog! Discover easy-to-follow tutorials and practical tips to help you build beautiful and functional websites from scratch. Perfect for beginners, our projects will guide you in mastering the basics of web development.",
-    demoLink: "https://netflix-20-james-kevins-projects.vercel.app",
+    demoLink: "https://simple-html-css-js-project.vercel.app",
     sourceCode:"https://github.com/LuffyThePirateKing2023/simple-html-css-js-project"
   },
   {
