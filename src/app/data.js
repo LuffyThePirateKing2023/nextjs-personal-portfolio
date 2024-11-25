@@ -28,7 +28,7 @@ export const projectsData = [
     id: 2,
     name: "Full Stack Netflix clone",
     description:"Explore a seamless streaming experience with our Netflix clone project. Dive into a world of unlimited entertainment with a user-friendly interface, personalized recommendations, and a vast library of movies and TV shows.",
-    demoLink: "https://netflix-20-james-kevins-projects.vercel.app",
+    demoLink: "https://netflix-20-gkcm23pz9-james-kevins-projects.vercel.app/",
     sourceCode:"https://github.com/LuffyThePirateKing2023/netflix-clone"
   },
   {
